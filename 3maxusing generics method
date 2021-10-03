@@ -1,0 +1,51 @@
+package org.generic.example;
+
+public class MyStack<E> {
+   private final int SIZE;
+   private int tos;
+   private E[] items;
+
+   public MyStack() {
+      this(10);
+   }
+   public MyStack(int s) {
+      this.SIZE = s > 0 ? s : 10;
+      tos = -1;
+      items = (E[]) new Object[SIZE];
+   }
+   public void push(E value) {
+      if (tos == SIZE - 1)
+         System.err.println("Stack is full");
+      else
+         items[++tos] = value;
+   }
+   public E pop() {
+      E item = null;
+      if (tos == -1)
+         System.err.println("Stack is empty");
+      else
+         item = items[tos--];
+      return item;
+   }
+}
+
+
+
+
+
+test stack to push months and print pop /////////////.......................
+package org.generic.example;
+public class TestStack {
+   public static void main(String[] args) {
+      MyStack<String> strStack=new MyStack<>(4);
+      strStack.push("January");
+      strStack.push("February");
+      strStack.push("March");
+      strStack.push("April");
+      System.out.println(strStack.pop());
+      System.out.println(strStack.pop());
+      System.out.println(strStack.pop());
+      System.out.println(strStack.pop());
+      System.out.println(strStack.pop()); 
+   }
+}
