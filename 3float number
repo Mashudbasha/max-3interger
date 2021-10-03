@@ -1,6 +1,6 @@
 import java.util.Scanner;  
   
- public class FloatMaxExample1 {  
+ public class FloatMax {  
  
     public static void main(String[] args) {  
     
