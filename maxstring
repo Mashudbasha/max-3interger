@@ -1,12 +1,15 @@
-lass GFG {
+package com;
+class Maxstring {
   
-    static String LexicographicalMaxString(String str)
+    public static String MaxString(String str)
     {
         
         String mx = "";
-        for (int i = 0; i < str.length(); ++i) {
-            if (mx.compareTo(str.substring(i)) <= 0) {
-                mx = str.substring(i);
+        
+		String str1 = null;
+        for (int i = 0; i < str1.length(); ++i) {
+            if (mx.compareTo(str1.substring(i)) <= 0) {
+                mx = str1.substring(i);
             }
         }
   
@@ -17,6 +20,6 @@ lass GFG {
     public static void main(String[] args)
     {
         String str = "banana";
-        System.out.println(LexicographicalMaxString(str));
+        System.out.println(MaxString(str));
     }
 }
